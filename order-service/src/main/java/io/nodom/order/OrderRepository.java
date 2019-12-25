@@ -1,0 +1,9 @@
+package io.nodom.order;
+
+import java.util.List;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface OrderRepository extends MongoRepository<Order, String> {
+
+  List<Order> findByAccountNumber(String accountNumber);
+}
